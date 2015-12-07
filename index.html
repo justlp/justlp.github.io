@@ -53,7 +53,7 @@
             <div class="exit-popup__img"></div>
             <h3 class="exit-popup__title">erer</h3>
             <p class="exit-popup__text">t</p>
-            <a href="#" class="btn btn-download-pck_orange btn_popup" onclick="ga('send', 'event', 'Popup', 'Click2','Step2');"><span>etet</span></a>
+            <a href="#" class="btn btn-download-pck_orange btn_popup"><span>etet</span></a>
         </div>
     </div>
 </div>
@@ -68,10 +68,15 @@
 
     ga('create', 'UA-71083837-1', 'auto');
     ga('send', 'pageview');
-    ga('send', 'event', 'Popup', 'Click','Step1');
 
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $('.btn').on('click', function (){
+        ga('send', 'event', 'PopupClicked', 'Click2','Step2');
+    });
 
+</script>
 
 </body>
 </html>
