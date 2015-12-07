@@ -73,8 +73,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
     $('.btn').on('click', function (){
-        ga('send', 'event', 'PopupClicked', 'Click2','Step2');
+        ga('send', 'event', 'PopupClicked');
     });
+    $('.exit-popup__trigger').on('click', function (){
+        ga('send', 'event', 'PopupClosed');
+    })
 
 </script>
 
