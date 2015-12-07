@@ -3,8 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+
+    <style>
+
+        .exit-popup-overlay{
+            position: fixed;
+            height: 12px;
+            width: 100%;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        .exit-popup-overlay:hover{
+            height: 100%;
+        }
+
+        .exit-popup{
+            background-color: gray;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 20px 50px 40px 245px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        input{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        input:checked ~ .exit-popup-overlay{
+            display: none;
+        }
+    </style>
 </head>
 <body>
+
+<div class="exit-popup-wrap">
+    <input id="exit-popup__trigger" type="checkbox" />
+    <div class="exit-popup-overlay">
+
+        <div class="exit-popup">
+            <label for="exit-popup__trigger">&#10006;</label>
+            <div class="exit-popup__img"></div>
+            <h3 class="exit-popup__title">erer</h3>
+            <p class="exit-popup__text">t</p>
+            <a href="#" class="btn btn-download-pck_orange btn_popup"><span>etet</span></a>
+        </div>
+    </div>
+</div>
 
 
 
