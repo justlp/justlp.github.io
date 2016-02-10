@@ -6,11 +6,19 @@
 </head>
 <body>
 
-
+<script src="//vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
 <script>
 
-
-console.log('HELLO WORLD');
+    VK.init(function() {
+        VK.api("users.get", {user_ids:"1,2,3,4"}, function(data) {
+            console.log(data);
+        });
+    }, function() {
+        
+        console.log('fail');
+        
+    }, '5.45');
+    console.log('HELLO WORLD');
 
 </script>
 
