@@ -53,6 +53,7 @@
         document.body.appendChild(link);
     }
 
+
     document.getElementById('test').addEventListener('click', function () {
         var url = document.getElementById('inp').value;
         var link = document.getElementById('link')
@@ -62,8 +63,8 @@
 
     })
     document.getElementById('goPrerender').addEventListener('click', function () {
+        var url = document.getElementById('inp').value;
         add_link('firstPrerender', url, 'prerender');
-
         console.log('added prerender')
         setTimeout(function () {
             var firstPrerender = document.getElementById('firstPrerender');
