@@ -15,9 +15,10 @@
 <!--<link id="firstPrerender" rel=prerender href="https://giphy.com/"/>-->
 <!--<link id="secondPrerender" rel=prerender href="http://justlp.github.io/index3.html"/>-->
 <p id="emptyParagraph"></p>
-<span id="test">test</span>
-<a href="https://giphy.com/">https://giphy.com/</a>
-<a href="http://justlp.github.io/index3.html">http://justlp.github.io/index3.html</a>
+<input type="text" id="inp">
+<span id="test" style="display: inline-block; padding: 2px 10px; background:#00c6f9; border-radius: 5px; color:#fff; cursor: pointer; font-family: Arial;">submit</span>
+<a id="link"></a>
+<!--<a href="http://justlp.github.io/index3.html">http://justlp.github.io/index3.html</a>-->
 <script>
     
 //    var secondPrerender = document.getElementById('secondPrerender');
@@ -51,7 +52,12 @@
     }
 
     document.getElementById('test').addEventListener('click', function () {
-        add_link('firstPrerender', 'https://giphy.com/', 'prerender');
+        var url = document.getElementById('inp').value;
+        var link = document.getElementById('link')
+        link.innerText = url;
+        link.setAttribute('href', url)
+
+        add_link('firstPrerender', url, 'prerender');
 
         console.log('added prerender')
         setTimeout(function () {
