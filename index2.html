@@ -15,6 +15,8 @@
 <link id="firstPrerender" rel=prerender href="http://justlp.github.io/"/>
 <link id="secondPrerender" rel=prerender href="http://justlp.github.io/index3.html"/>
 <p id="emptyParagraph"></p>
+<a href="http://justlp.github.io/">http://justlp.github.io/</a>
+<a href="http://justlp.github.io/index3.html">http://justlp.github.io/index3.html</a>
 <script>
     var firstPrerender = document.getElementById('firstPrerender');
     var secondPrerender = document.getElementById('secondPrerender');
@@ -41,16 +43,16 @@
     secondPrerender.addEventListener('webkitprerenderstop', function() { log("second_webkitprerenderstop"); }, false);
     secondPrerender.addEventListener('webkitprerenderload', function() { log("second_webkitprerenderload"); }, false);
     secondPrerender.addEventListener('webkitprerenderdomcontentloaded', function() { log("second_webkitprerenderdomcontentloaded"); }, false);
-    function addThirdPrerender()
-    {
-        var emptyParagraph = document.getElementById("emptyParagraph");
-        emptyParagraph.innerHTML = '<link id="thirdPrerender" rel=prerender href="http://third-prererender.com/"/>';
-        var thirdPrerender = document.getElementById('thirdPrerender');
-        thirdPrerender.addEventListener('webkitprerenderstart', function() { log("third_webkitprerenderstart"); }, false);
-        thirdPrerender.addEventListener('webkitprerenderstop', function() { log("third_webkitprerenderstop"); }, false);
-        thirdPrerender.addEventListener('webkitprerenderload', function() { log("third_webkitprerenderload"); }, false);
-        thirdPrerender.addEventListener('webkitprerenderdomcontentloaded', function() { log("third_webkitprerenderdomcontentloaded"); }, false);
-    }
+//    function addThirdPrerender()
+//    {
+//        var emptyParagraph = document.getElementById("emptyParagraph");
+//        emptyParagraph.innerHTML = '<link id="thirdPrerender" rel=prerender href="http://third-prererender.com/"/>';
+//        var thirdPrerender = document.getElementById('thirdPrerender');
+//        thirdPrerender.addEventListener('webkitprerenderstart', function() { log("third_webkitprerenderstart"); }, false);
+//        thirdPrerender.addEventListener('webkitprerenderstop', function() { log("third_webkitprerenderstop"); }, false);
+//        thirdPrerender.addEventListener('webkitprerenderload', function() { log("third_webkitprerenderload"); }, false);
+//        thirdPrerender.addEventListener('webkitprerenderdomcontentloaded', function() { log("third_webkitprerenderdomcontentloaded"); }, false);
+//    }
 </script>
 </body>
 </html>
